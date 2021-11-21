@@ -1,4 +1,4 @@
-package com.gabchak.budget.models;
+package com.gabchak.budget.model;
 
 import java.util.Set;
 import javax.persistence.Entity;

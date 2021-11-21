@@ -1,4 +1,4 @@
-package com.gabchak.budget.models;
+package com.gabchak.budget.model;
 
 import java.time.LocalDateTime;
 import javax.persistence.Column;
@@ -26,9 +26,12 @@ public class RecordEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   Integer id;
+  @Column(nullable = false)
   Double value;
+  @Column(name = "creation_date", nullable = false)
   LocalDateTime creationDate;
   String description;
+  @Column(nullable = false)
   Boolean income;
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "wallet_id")
